@@ -2,7 +2,7 @@ def data_getter(path):
   import pandas as pd
 
   try: file = pd.read_excel(path)
-  except: file = pd.read_csv(path, encoding= 'utf-8')
+  except: file = pd.read_csv(path, encoding= 'latin-1')
 
   course_info = file.fillna(value=0)
   course_copy = course_info
